@@ -1,0 +1,706 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  text-decoration: none;
+  list-style: none;
+}
+
+@font-face {
+  font-family: "Lato", sans-serif;
+  src: url("https://fonts.googleapis.com/css2?family=Lato:wght@300&display=swap");
+}
+@font-face {
+  font-family: "Lato_700", sans-serif;
+  src: url("https://fonts.googleapis.com/css2?family=Lato:wght@300;700&display=swap");
+}
+
+/*----------------------------HEADER NAV-----------------------------*/
+
+header {
+  display: flex;
+  width: 100vw;
+  height: 70px;
+  background-color: #f5f4f3;
+}
+nav {
+  display: flex;
+  width: 97vw;
+  justify-content: space-between;
+  margin: auto;
+}
+
+header nav ul {
+  display: flex;
+  align-items: center;
+  white-space: nowrap;
+}
+
+header nav ul li a {
+  display: flex;
+  align-items: center;
+  color: black;
+  font-family: "Lato_700", sans-serif;
+  font-size: 0.9rem;
+  margin: 5px 6px;
+}
+header nav ul li svg {
+  margin: 5px;
+}
+
+header nav ul li {
+  margin-left: 5px;
+  margin-right: 5px;
+}
+
+header nav ul .download_links a {
+  border: 1px solid black;
+  border-radius: 20px;
+  padding: 0 7px;
+}
+
+header nav ul .hamburger {
+  display: none;
+  padding-top: 3px;
+  padding-left: 3px;
+  padding-right: 3px;
+  margin: 5px 6px;
+}
+
+header nav ul .add_announce_link {
+  border: 1px solid black;
+  border-radius: 20px;
+}
+
+header nav ul .links:hover {
+  background-color: white;
+  border-radius: 5px;
+  transition: 0.5s;
+}
+
+header nav ul .download_links a:hover {
+  border: 1px solid blue;
+  text-decoration: blue;
+}
+header nav ul .download_links a:hover {
+  color: blue;
+}
+
+header nav ul .add_announce_link:hover {
+  border: 2px solid black;
+  transition: 0.2ms;
+}
+/*----------------------------FIN HEADER NAV-----------------------------*/
+
+/*----------------------------DEBUT SECTION MAIN IMAGE-----------------------------*/
+
+.main_image {
+  position: relative;
+  width: 100vw;
+  height: 450px;
+}
+.main_image img {
+  object-fit: cover;
+  width: 100%;
+  height: 100%;
+}
+
+/*-----------------------------ZONE RECHERCHE DESTINATION---------------------------*/
+/*--------------------------DIV INFORMATION-------------------------*/
+.destination_informations {
+  position: absolute;
+  width: 1000px;
+  height: 255px;
+  left: 50%;
+  bottom: 50%;
+  transform: translate(-50%, 50%);
+  z-index: 1;
+}
+
+#destination_information_title {
+  width: 100%;
+  margin: auto;
+  padding-bottom: 10px;
+  font-family: "Lato_700", sans-serif;
+  font-size: 2.4em;
+  font-weight: 500;
+  color: white;
+}
+/*------------------------DIV INPUT INFORMATION------------------*/
+.input_informations {
+  display: flex;
+  position: absolute;
+  width: 100%;
+  height: auto;
+  margin: auto;
+  border-radius: 5px;
+  background-color: #f5f4f3;
+  flex-wrap: wrap;
+  padding: 15px;
+  justify-content: space-around;
+  box-sizing: border-box;
+}
+
+/*---------------ZONE DE RECHERCHE DE DESTINATION----------------*/
+
+.search {
+  position: relative;
+  display: flex;
+  width: 25%;
+  align-items: center;
+}
+
+.search .int {
+  width: 310px;
+  height: 56px;
+  border: 1px solid gray;
+  border-radius: 5px;
+  padding-left: 60px;
+}
+
+.search svg {
+  position: absolute;
+  margin-left: 15px;
+}
+
+/*------------DIV DEP / ARR-----------------
+------------------------------------------*/
+.dep_arr {
+  position: relative;
+  display: flex;
+  width: 31%;
+  align-items: center;
+  justify-content: space-around;
+  flex-wrap: nowrap;
+}
+
+/*---------------BOUTON ARRIVAL ----------------*/
+
+.dep_arr .arrival {
+  display: flex;
+  width: 155px;
+  height: 56px;
+  border: 1px solid gray;
+  border-top-left-radius: 5px;
+  border-bottom-left-radius: 5px;
+  color: #8d8d8d;
+  background-color: white;
+  align-items: center;
+}
+
+.dep_arr .arrival svg {
+  margin-left: 10px;
+  color: white;
+  color: #8d8d8d;
+  margin-left: 12px;
+  margin-right: 7px;
+}
+
+/*---------------BOUTON DEPARTURE ----------------*/
+
+.dep_arr .departure {
+  display: flex;
+  width: 155px;
+  height: 56px;
+  border: 1px solid gray;
+  border-top-right-radius: 5px;
+  border-bottom-right-radius: 5px;
+  color: #8d8d8d;
+  background-color: white;
+  align-items: center;
+}
+
+.dep_arr .departure svg {
+  color: white;
+  color: #8d8d8d;
+  margin-left: 12px;
+  margin-right: 7px;
+}
+
+/*---------------BOUTON VACANCIERS----------------*/
+.vacationer {
+  /* display: flex; */
+  width: 17%;
+  height: 56px;
+  padding-right: 40px;
+  border: 1px solid gray;
+  border-radius: 5px;
+  color: #8d8d8d;
+  background-color: white;
+  align-items: center;
+  justify-content: center;
+}
+.vac {
+  position: absolute;
+  margin-top: 20px;
+  margin-left: 30px;
+  justify-content: center;
+}
+
+#vacancier_logo {
+  margin-left: 10px;
+  margin-top: 15px;
+  color: white;
+  color: #8d8d8d;
+  padding-right: 10px;
+}
+
+.list {
+  width: 190px;
+  height: 40px;
+  margin-top: 20px;
+  background-color: #f5f4f3;
+  border-radius: 5px;
+  display: flex;
+  align-content: center;
+  justify-content: space-evenly;
+  transform: scale(0);
+  transform-origin: top;
+  transition: 0.3s;
+}
+
+.sub {
+  cursor: pointer;
+  font-size: 2rem;
+  font-weight: bold;
+}
+.add {
+  cursor: pointer;
+  font-size: 2rem;
+  font-weight: bold;
+}
+
+.value {
+  font-size: 1rem;
+}
+
+.newlist {
+  transform: scale(1);
+}
+/*---------------BOUTON PRESS RECHERCHE----------------*/
+
+.validation {
+  display: flex;
+  width: 155px;
+  height: 56px;
+  border: none;
+  border-radius: 30px;
+  background-color: #0267db;
+  color: white;
+  font-size: 1rem;
+  align-items: center;
+  justify-content: center;
+}
+
+.validation svg {
+  color: white;
+  padding-right: 5px;
+}
+
+/*-----------------------------FIN  ZONE RECHERCHE DESTINATION--------------------*/
+/*----------------------------FIN SECTION MAIN IMAGE-----------------------------*/
+/*----------------------------DEBUT SECTION MOSAIQUE-----------------------------*/
+
+.mosaique_section {
+  width: 100vw;
+  height: auto;
+}
+
+.mosaique_content {
+  position: relative;
+  width: 93vw;
+  margin: auto;
+  top: -40px;
+  background-color: white;
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+}
+.mosaique_first-title {
+  position: relative;
+  width: 85%;
+  margin: auto;
+  height: 110px;
+}
+
+.mosaique_first-title h2 {
+  padding-top: 30px;
+  padding-bottom: 15px;
+  font-family: "Lato", sans-serif;
+  font-size: 1.5rem;
+}
+
+.mosaique_first-title h3 {
+  font-family: "Lato", sans-serif;
+  font-size: 1rem;
+  font-weight: 500;
+}
+
+/*------------------------------MOSAIQUE GRID----------------------------------------------*/
+
+.mosaique_grid {
+  display: grid;
+  grid-template-columns: repeat(8, 1fr);
+  grid-template-rows: repeat(2, 1fr);
+  grid-column-gap: 15px;
+  grid-row-gap: 15px;
+  width: 85%;
+  margin: auto;
+}
+
+.div1 {
+  grid-area: 1 / 1 / 3 / 5;
+}
+.div2 {
+  grid-area: 1 / 5 / 2 / 7;
+}
+.div3 {
+  grid-area: 1 / 7 / 2 / 9;
+}
+.div4 {
+  grid-area: 2 / 5 / 3 / 7;
+}
+.div5 {
+  grid-area: 2 / 7 / 3 / 9;
+}
+
+.vignette {
+  position: relative;
+  display: flex;
+  overflow: hidden;
+  border-radius: 5px;
+}
+.vignette img {
+  display: flex;
+  width: 100%;
+  height: 100%;
+  border-radius: 5px;
+  object-fit: cover;
+}
+.vignette img:hover {
+  transition: all 0.3s ease-in-out;
+  transform: scale(1.05);
+  border-radius: 5px;
+}
+
+.filtre_fume {
+  position: absolute;
+  display: flex;
+  width: 100%;
+  height: 30%;
+  border-radius: 5px;
+  bottom: 0;
+  background: linear-gradient(180deg, transparent, rgba(0, 0, 0, 0.8));
+  z-index: 1;
+}
+.img_overflow_hidden {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  border-radius: 5px;
+  overflow: hidden;
+}
+.filtre_fume p {
+  position: absolute;
+  bottom: 25px;
+  left: 20px;
+  font-family: "Lato", sans-serif;
+  font-size: 1.2em;
+  color: white;
+  font-weight: 600;
+  z-index: 1;
+}
+
+.idees {
+  position: relative;
+  width: 85%;
+  height: 50px;
+  margin: auto;
+  padding-top: 2px;
+}
+
+.idees button {
+  position: relative;
+  width: 200px;
+  height: 30px;
+  margin-top: 15px;
+  margin-left: -20px;
+  background-color: white;
+  color: #2474de;
+  border: none;
+  font-size: 1.1rem;
+  font-weight: 500;
+}
+
+.sequence_mosaique_grid {
+  display: grid;
+  grid-template-columns: repeat(8, 1fr);
+  grid-template-rows: repeat(2, 1fr);
+  grid-column-gap: 15px;
+  grid-row-gap: 15px;
+  width: 85%;
+  margin: auto;
+}
+
+.div_ski {
+  grid-area: 1 / 1 / 2 / 3;
+}
+.div_ext {
+  grid-area: 1 / 3 / 2 / 5;
+}
+.div_cottage {
+  grid-area: 2 / 1 / 3 / 3;
+}
+.div_montagne {
+  grid-area: 2 / 3 / 3 / 5;
+}
+.div_chambres {
+  grid-area: 1 / 5 / 3 / 9;
+}
+
+/*----------------------------------DEBUT SECTION LOCATION----------------------------------*/
+/*-----------------------------------debut location_content---------------------------------*/
+
+.location {
+  width: 100vw;
+  height: 800px;
+  /* background-color: orange; */
+}
+.location_content {
+  width: 88%;
+  margin: auto;
+  /* background-color: yellow; */
+}
+#location_title {
+  /* background-color: green; */
+  width: 79%;
+  margin: auto;
+  padding-bottom: 15px;
+  font-family: "Lato", sans-serif;
+}
+.location_scroll_proposed {
+  display: flex;
+  width: 100%;
+
+  justify-content: center;
+}
+.scoll_buttons {
+  position: relative;
+  width: 70px;
+  /* background-color: #2474de; */
+}
+
+.left_scroll {
+  position: absolute;
+  width: 50px;
+  height: 50px;
+  border-radius: 25px;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  border: 1px solid #d8d8d8;
+  background-color: white;
+}
+.proposed_location {
+  display: flex;
+  /* background-color: red; */
+  width: 90%;
+  column-gap: 10px;
+}
+.location_vignettes {
+  width: 20%;
+  /* background-color: pink; */
+  border-radius: 5px;
+}
+.location_img_content {
+  /* border: 1px solid white; */
+  height: 21vw;
+  border-radius: 5px;
+}
+.location_img_content img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 5px;
+}
+.infos {
+  padding-top: 10px;
+  font-family: "Lato", sans-serif;
+  /* border: 1px solid blueviolet; */
+}
+
+/*------------------------------------------MEDIAQUERYS--------------------------------------*/
+
+/*--------------------------MEDIAQUERYS TABLETTE--------------------------------------------*/
+
+@media (max-width: 992px) {
+  header nav ul .remove_button {
+    display: none;
+  }
+  header nav ul .hamburger {
+    display: block;
+  }
+
+  .destination_informations {
+    width: 97vw;
+  }
+  .input_informations {
+    justify-content: space-between;
+  }
+  .search {
+    width: 100%;
+    margin-bottom: 10px;
+  }
+  .search .int {
+    width: 100%;
+  }
+  .dep_arr {
+    width: 40%;
+    margin-bottom: 10px;
+  }
+  .dep_arr .departure {
+    width: 50%;
+  }
+  .dep_arr .arrival {
+    width: 50%;
+  }
+  .vacationer {
+    width: 25%;
+    margin-bottom: 10px;
+  }
+  .validation {
+    width: 25%;
+  }
+  .mosaique_grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(6, 1fr);
+    grid-column-gap: 15px;
+    grid-row-gap: 45px;
+  }
+
+  .div1 {
+    grid-area: 1 / 1 / 3 / 5;
+  }
+  .div2 {
+    grid-area: 3 / 1 / 5 / 3;
+  }
+  .div3 {
+    grid-area: 3 / 3 / 5 / 5;
+  }
+  .div4 {
+    grid-area: 5 / 1 / 7 / 3;
+  }
+  .div5 {
+    grid-area: 5 / 3 / 7 / 5;
+  }
+
+  .sequence_mosaique_grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(6, 1fr);
+    grid-column-gap: 15px;
+    grid-row-gap: 45px;
+  }
+
+  .div_ski {
+    grid-area: 1 / 1 / 3 / 5;
+  }
+  .div_ext {
+    grid-area: 3 / 1 / 5 / 3;
+  }
+  .div_cottage {
+    grid-area: 3 / 3 / 5 / 5;
+  }
+  .div_montagne {
+    grid-area: 5 / 1 / 7 / 3;
+  }
+  .div_chambres {
+    grid-area: 5 / 3 / 7 / 5;
+  }
+
+  .filtre_fume {
+    background: transparent;
+  }
+  .mosaique_content {
+    top: 0;
+  }
+  .mosaique_first-title {
+    height: 150px;
+  }
+  .filtre_fume p {
+    color: black;
+    bottom: -30px;
+    left: 0;
+    font-size: 1.1em;
+  }
+
+  .vignette {
+    overflow: visible;
+  }
+  .vignette .tst img {
+    height: 80vw;
+  }
+  .vignette img {
+    height: 30vw;
+  }
+
+  .idees {
+    margin-top: 25px;
+  }
+}
+/*---------------------FIN MEDIAQUERYS TABLETTE--------------------------------------------*/
+
+/*----------------------MEDIAQUERYS TELEPHONE--------------------------*/
+
+@media (max-width: 768px) {
+  header nav ul .remove_button_two {
+    display: none;
+  }
+
+  .input_informations {
+    background-color: transparent;
+  }
+  .search {
+    width: 95vw;
+  }
+  .search .int {
+    height: 40px;
+  }
+  .dep_arr {
+    width: 100%;
+  }
+  .dep_arr .departure {
+    height: 40px;
+  }
+  .dep_arr .arrival {
+    height: 40px;
+  }
+  .vacationer {
+    width: 100%;
+    justify-content: left;
+    height: 40px;
+  }
+  .validation {
+    width: 40%;
+    margin: auto;
+    height: 40px;
+  }
+
+  #destination_information_title {
+    font-size: 1.5rem;
+  }
+  .mosaique_first-title {
+    height: 150px;
+  }
+  .vignette {
+    overflow: visible;
+  }
+
+  .filtre_fume p {
+    font-size: 1em;
+    color: black;
+  }
+}
+
+/*------------FIN MEDIAQUERYS TELEPHONE---------------*/
+/*--------------------------------------FIN MEDIAQUERYS--------------------------------------*/
